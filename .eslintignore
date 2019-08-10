@@ -1,3 +1,4 @@
 /*.js
-/resources/js/*.js
 /public
+/resources/assets/app.js
+/resources/assets/bootstrap.js
