@@ -11,6 +11,12 @@ A website base on Laravel and Bootstrap for HackerSir.
 - Font Awesome 5
 - Vue.js 2
 
+## Lint
+- js
+  - eslint(airbnb)
+- php
+  - PSR@2
+
 ## Including
 - Packages
   - [predis/predis](https://github.com/nrk/predis): ^1.1
@@ -21,6 +27,8 @@ A website base on Laravel and Bootstrap for HackerSir.
 ## Installation Guide
 1. Run the following commands.
 ```bash
+# Setting composer config let it can install private repo
+composer config http-basic.gitlab.cs.nctu.edu.tw $GITLAB_DEPLOY_USERNAME $GITLAB_DEPLOY_PASSWORD
 composer install
 yarn
 ```
