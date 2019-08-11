@@ -9,7 +9,6 @@ return [
      |
      | Debugbar is enabled by default, when debug is set to true in app.php.
      | You can override the value by setting enable to true or false instead of null.
-     | 
      | You can provide an array of URI's that must be ignored (eg. 'api/*')
      |
      */
@@ -33,7 +32,8 @@ return [
      */
     'storage' => [
         'enabled'    => true,
-        'driver'     => 'file', // redis, file, pdo, custom
+        // redis, file, pdo, custom
+        'driver'     => 'file',
         'path'       => storage_path('debugbar'), // For file driver
         'connection' => null,   // Leave null for default connection (Redis/PDO)
         'provider'   => '' // Instance of StorageInterface for custom driver
@@ -101,27 +101,48 @@ return [
      */
 
     'collectors' => [
-        'phpinfo'         => true,  // Php version
-        'messages'        => true,  // Messages
-        'time'            => true,  // Time Datalogger
-        'memory'          => true,  // Memory usage
-        'exceptions'      => true,  // Exception displayer
-        'log'             => true,  // Logs from Monolog (merged in messages if enabled)
-        'db'              => true,  // Show database (PDO) queries and bindings
-        'views'           => true,  // Views with their data
-        'route'           => true,  // Current route information
-        'auth'            => true, // Display Laravel authentication status
-        'gate'            => true, // Display Laravel Gate checks
-        'session'         => true,  // Display session data
-        'symfony_request' => true,  // Only one can be enabled..
-        'mail'            => true,  // Catch mail messages
-        'laravel'         => false, // Laravel version and environment
-        'events'          => false, // All events fired
-        'default_request' => false, // Regular or special Symfony request logger
-        'logs'            => false, // Add the latest log messages
-        'files'           => false, // Show the included files
-        'config'          => false, // Display config settings
-        'cache'           => false, // Display cache events
+        // Php version
+        'phpinfo'         => true,
+        // Messages
+        'messages'        => true,
+        // Time Datalogger
+        'time'            => true,
+        // Memory usage
+        'memory'          => true,
+        // Exception displayer
+        'exceptions'      => true,
+        // Logs from Monolog (merged in messages if enabled)
+        'log'             => true,
+        // Show database (PDO) queries and bindings
+        'db'              => true,
+        // Views with their data
+        'views'           => true,
+        // Current route information
+        'route'           => true,
+        // Display Laravel authentication status
+        'auth'            => true,
+        // Display Laravel Gate checks
+        'gate'            => true,
+        // Display session data
+        'session'         => true,
+        // Only one can be enabled..
+        'symfony_request' => true,
+        // Catch mail messages
+        'mail'            => true,
+        // Laravel version and environment
+        'laravel'         => false,
+        // All events fired
+        'events'          => false,
+        // Regular or special Symfony request logger
+        'default_request' => false,
+        // Add the latest log messages
+        'logs'            => false,
+        // Show the included files
+        'files'           => false,
+        // Display config settings
+        'config'          => false,
+        // Display cache events
+        'cache'           => false,
     ],
 
     /*
@@ -135,32 +156,44 @@ return [
 
     'options' => [
         'auth' => [
-            'show_name' => true,   // Also show the users name/email in the debugbar
+            // Also show the users name/email in the debugbar
+            'show_name' => true,
         ],
         'db' => [
-            'with_params'       => true,   // Render SQL with the parameters substituted
-            'backtrace'         => true,   // Use a backtrace to find the origin of the query in your files.
-            'timeline'          => false,  // Add the queries to the timeline
-            'explain' => [                 // Show EXPLAIN output on queries
+            // Render SQL with the parameters substituted
+            'with_params'       => true,
+            // Use a backtrace to find the origin of the query in your files.
+            'backtrace'         => true,
+            // Add the queries to the timeline
+            'timeline'          => false,
+            // Show EXPLAIN output on queries
+            'explain' => [
                 'enabled' => false,
-                'types' => ['SELECT'],     // // workaround ['SELECT'] only. https://github.com/barryvdh/laravel-debugbar/issues/888 ['SELECT', 'INSERT', 'UPDATE', 'DELETE']; for MySQL 5.6.3+
+                // workaround ['SELECT'] only.
+                // https://github.com/barryvdh/laravel-debugbar/issues/888
+                // ['SELECT', 'INSERT', 'UPDATE', 'DELETE']; for MySQL 5.6.3+
+                'types' => ['SELECT'],
             ],
-            'hints'             => true,    // Show hints for common mistakes
+            // Show hints for common mistakes
+            'hints'             => true,
         ],
         'mail' => [
             'full_log' => false
         ],
         'views' => [
-            'data' => false,    //Note: Can slow down the application, because the data can be quite large..
+            // Note: Can slow down the application, because the data can be quite large..
+            'data' => false,
         ],
         'route' => [
-            'label' => true  // show complete route on bar
+            // show complete route on bar
+            'label' => true
         ],
         'logs' => [
             'file' => null
         ],
         'cache' => [
-            'values' => true // collect cache values
+            // collect cache values
+            'values' => true
         ],
     ],
 
