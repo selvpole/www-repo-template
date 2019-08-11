@@ -12,7 +12,13 @@
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 @import "~@fortawesome/fontawesome-free/scss/solid";
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+html, body, #app {
+  @include size(100%, 100%);
+  font-family: $font-family-sans-serif;
+  margin: 0 !important;
 }

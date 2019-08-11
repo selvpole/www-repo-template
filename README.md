@@ -40,8 +40,29 @@ php artisan key:generate
 5. NCTU CSSSO setting(optional)
 https://gitlab.cs.nctu.edu.tw/www/cscc-sso/sso-sdk
 
-## DevOps
+## Workspace
+### Laradock
+1. Install `docker` & `docker-compose`
 
+2. Clone laradock(alreay in git submodule)
+```bash
+cd laradock/
+git pull
+```
+
+3. Create your workspace(in laradock directory)
+```bash
+docker-compose up -d nginx redis mariadb maildev workspace php-fpm
+```
+
+4. Install module in container
+```bash
+# you must add '--user=laradock' or you will get some promission problem
+docker-compose exec --user=laradock workspace bash
+# Then see 'Installation Guide' part
+```
+
+## DevOps
 ### CI Lint
 You can check your .gitlab-ci.yml in [CI Lint](https://gitlab.cs.nctu.edu.tw/www/www-repo-template/-/ci/lint)
 
