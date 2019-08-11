@@ -63,8 +63,10 @@
             "@php artisan key:generate --ansi"
         ]
     },
-    "repositories": [{
-        "type": "gitlab",
-        "url": "https://gitlab.cs.nctu.edu.tw/www/cscc-sso/sso-sdk"
-    }]
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://gitlab.cs.nctu.edu.tw/www/cscc-sso/sso-sdk"
+        }
+    ]
 }

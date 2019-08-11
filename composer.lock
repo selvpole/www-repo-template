@@ -4,15 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "988106fa33389e34aac65ea9a9a6e2d3",
+    "content-hash": "3ac79c789c93879ff3a446b9ec4670c7",
     "packages": [
         {
             "name": "cscc/sso",
             "version": "0.4.0",
             "source": {
                 "type": "git",
-                "url": "ssh://git@gitlab.cc.cs.nctu.edu.tw:10022/www/cscc-sso/sso-sdk.git",
-                "reference": "cfb9305fa1437bafb5c7015ad791d073e8c8174c"
+                "url": "https://gitlab.cs.nctu.edu.tw/www/cscc-sso/sso-sdk",
+                "reference": "f8197ea14f9da3896a39f52d5aa3ce8f1473fe93"
             },
             "dist": {
                 "type": "zip",
