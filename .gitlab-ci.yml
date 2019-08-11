@@ -1,3 +1,4 @@
+image: dockersource.cc.cs.nctu.edu.tw/www/images/laravel-build-image:7.1-20190626
 stages:
   - build for test
   - test
