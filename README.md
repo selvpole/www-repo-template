@@ -40,6 +40,11 @@ php artisan key:generate
 5. NCTU CSSSO setting(optional)
 https://gitlab.cs.nctu.edu.tw/www/cscc-sso/sso-sdk
 
+## DevOps
+
+### CI Lint
+You can check your .gitlab-ci.yml in [CI Lint](https://gitlab.cs.nctu.edu.tw/www/www-repo-template/-/ci/lint)
+
 ## Notice
 - If you modify some files which need to be compiled, make sure you have run the following command before commit.
 (For testing in local, you can also compile files by using `yarn run dev` instead.)
