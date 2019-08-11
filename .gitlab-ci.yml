@@ -1,0 +1,12 @@
+stages:
+  - test
+
+include:
+  - project: 'devops/templates'
+    file: 'laravel/jobs/laravel-build-for-test.gitlab-ci.yml'
+  - project: 'devops/templates'
+    file: 'laravel/jobs/laravel-test-psr2.gitlab-ci.yml'
+  - project: 'devops/templates'
+    file: 'laravel/jobs/laravel-test-eslint.gitlab-ci.yml'
+  - project: 'devops/templates'
+    file: 'laravel/jobs/laravel-test-unit.gitlab-ci.yml'
