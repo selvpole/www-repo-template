@@ -72,6 +72,7 @@ docker-compose up -d nginx redis mariadb maildev workspace php-fpm
 
 5. Install module in container
 ```bash
+cp .env.example.laradock .env
 # you must add '--user=laradock' or you will get some promission problem
 docker-compose exec --user=laradock workspace bash
 # Then see 'Installation Guide' part
