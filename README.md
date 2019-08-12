@@ -60,12 +60,17 @@ cd laradock/
 git pull
 ```
 
-3. Create your workspace(in laradock directory)
+3. Copy `env-example` to `.env`.
+```bash
+cp env-example .env
+```
+
+4. Create your workspace(in laradock directory)
 ```bash
 docker-compose up -d nginx redis mariadb maildev workspace php-fpm
 ```
 
-4. Install module in container
+5. Install module in container
 ```bash
 # you must add '--user=laradock' or you will get some promission problem
 docker-compose exec --user=laradock workspace bash
