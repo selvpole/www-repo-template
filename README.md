@@ -74,7 +74,7 @@ docker-compose exec --user=laradock workspace bash
 
 ## DevOps
 ### CI Lint
-You can check your .gitlab-ci.yml in [CI Lint](https://gitlab.cs.nctu.edu.tw/www/www-repo-template/-/ci/lint)
+You can check your `.gitlab-ci.yml` in [CI Lint](https://gitlab.cs.nctu.edu.tw/www/www-repo-template/-/ci/lint)
 
 ## Notice
 - If you modify some files which need to be compiled, make sure you have run the following command before commit.

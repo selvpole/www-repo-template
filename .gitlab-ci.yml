@@ -6,10 +6,10 @@ stages:
 
 include:
   - project: 'devops/templates'
-    file: 'laravel/jobs/laravel-build-for-test(sso-sdk).gitlab-ci.yml'
+    file: 'laravel/modules/build/test(sso-sdk).gitlab-ci.yml'
   - project: 'devops/templates'
-    file: 'laravel/jobs/laravel-test-psr2.gitlab-ci.yml'
+    file: 'laravel/modules/test/psr2.gitlab-ci.yml'
   - project: 'devops/templates'
-    file: 'laravel/jobs/laravel-test-eslint.gitlab-ci.yml'
+    file: 'laravel/modules/test/eslint.gitlab-ci.yml'
   - project: 'devops/templates'
-    file: 'laravel/jobs/laravel-build-for-deploy(sso-sdk).gitlab-ci.yml'
+    file: 'laravel/modules/build/deploy(sso-sdk).gitlab-ci.yml'
