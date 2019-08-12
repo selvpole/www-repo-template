@@ -56,8 +56,8 @@ In this project we use `26184055c5126dc51f2aadadd7a3b4a9506a1d04`
 
 2. Clone laradock(alreay in git submodule)
 ```bash
+git submodule update --init
 cd laradock/
-git pull
 ```
 
 3. Create your workspace(in laradock directory)
