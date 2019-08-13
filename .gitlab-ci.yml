@@ -3,6 +3,7 @@ stages:
   - build for test
   - test
   - build for deploy
+  - deploy
 
 include:
   - project: 'devops/templates'
@@ -13,3 +14,5 @@ include:
     file: 'laravel/modules/test/eslint.gitlab-ci.yml'
   - project: 'devops/templates'
     file: 'laravel/modules/build/deploy(sso-sdk).gitlab-ci.yml'
+  - project: 'devops/templates'
+    file: 'laravel/modules/deploy/ws.gitlab-ci.yml'
