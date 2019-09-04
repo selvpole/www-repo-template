@@ -12,6 +12,9 @@
 @section('content')
 <div class="title-block d-flex flex-column justify-content-center align-items-center">
     <h1 class="title text-center">CSCC WWW TEMPLATE</h1>
+    <button onclick="location.href = 'todo'">Enter</button>
+</div>
+<div>
 </div>
 @endsection
 
