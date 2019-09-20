@@ -15,21 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/todo/tasks', 'TaskController@index');
-// Route::post('/todo/tasks', 'TaskController@store');
-
 Route::resource('/todo', 'TodoController')->except([
     'show'
 ]);
-
-// Route::get('/tasks', 'TaskController@index');
-// Route::post('/tasks', 'TaskController@add');
-//Route::delete('/tasks/{tasks}', 'TaskController@remove');
-
-// Route::get('/todo', 'TodoController@index');
-// Route::post('/todo', 'TodoController@update');
-// Route::delete('/todo/{tasks}', 'TodoController@remove');
-
-//Auth::routes();
-
-//Route::get('/home', 'HomeController@index')->name('home');
