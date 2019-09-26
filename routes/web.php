@@ -15,6 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/todo', 'TodoController')->except([
-    'show'
-]);
+Route::resource('/todo', 'TodoController')->except([ 'show' ]);
