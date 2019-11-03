@@ -34,6 +34,7 @@ p {
 }
 
 </style>
+@endsection
 
 @section('content')
     <div class="task-panel d-flex flex-column align-items-center">
@@ -42,12 +43,19 @@ p {
             <hr>
             {{ csrf_field() }}
             <p>Name:</p>
-            <input class="input-bar" type="text" name="name">
-            
+            <input class="input-bar" type="text" name="name">            
+            <div id="alertName" class="alert alert-danger collapse">
+                <a id="closeName" href="#" class="close">&times;</a>
+                <strong>Error!</strong> The name should be more than 3 words!
+            </div>
+
             <p>Description:</p>
             <textarea class="input-bar" type="text" rows="6" name="description"></textarea>
-
-            @include('common.errors')
+            <div id="alertDesc" class="alert alert-danger collapse">
+                <a id="closeDesc" href="#" class="close">&times;</a>
+                <strong>Error!</strong> The description is required!
+            </div>
+            <!-- @include('common.errors') -->
             <br>
             <div class="buttons">
                 <button type="submit" class="btn btn-success" name="add">Add</button>
@@ -55,4 +63,20 @@ p {
             </div>
         </form>
     </div>
+@endsection
+
+@section('script')
+<script>
+    @if ($errors->has('name'))
+        $('#alertName').show('fade');
+        $('#closeName').click(function() {
+            $('#alertName').hide();
+        });
+    @elseif ($errors->has('description'))
+        $('#alertDesc').show('fade');
+        $('#closeDesc').click(function() {
+            $('#alertDesc').hide('fade');
+        });
+    @endif
+</script>
 @endsection

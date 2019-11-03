@@ -43,18 +43,11 @@ tr th {
 
 @section('content')
 <div class="todo-panel d-flex flex-column align-items-center">
-    @if ($errors->has('title'))
-        <strong>{{ $errors->first('title') }}</strong>
-    @endif
-
     <table>
         <tr>
             <th>Name</th>
             <th>Description</th>
             <th>Created Time</th>
-            <!-- <th>
-                <button onclick="location.href = '/todo/tasks'" class="btn btn-primary">Add Task</button>
-            </th> -->
             <th>Latest Updated Time</th>
             <th>
                 <form action="/todo/create" method="GET">
@@ -71,17 +64,39 @@ tr th {
             <th>
                 <div class="butt">
                     <form action="/todo/{{ $tasks->id }}/edit" method="GET">
-                        <button type="submit" class="btn btn-success butt_mod">Edit</button>
+                        <button id="btnSubmit" type="submit" class="btn btn-success butt_mod">Edit</button>
                     </form>
                     <form action="/todo/{{ $tasks->id }}" method="POST">
                         {{ csrf_field() }}
                         {{ method_field('Delete') }}
-                        <button type="submit" class="btn btn-danger butt_mod">Delete</button>
+                        <button id="btnSubmit" type="submit" class="btn btn-danger butt_mod">Delete</button>
                     </form>
                 </div>
             </th>
         </tr>
         @endforeach
     </table>
+    <div id="myAlert" class="alert alert-danger collapse">
+        <a id="linkClose" href="#" class="close">&times;</a>
+        <strong>Error!</strong> The task does not exist!
+    </div>
 </div>
+@endsection
+
+@section('script')
+<script>
+    @if ($errors->has('title'))
+        alert('Not found this task');
+        // $(document).ready(function() {
+        //     $('#btnSubmit').click(function() {
+        //         $('#myAlert').show('fade');
+        //     });
+        // });
+
+        // $('#linkClose').click(function() {
+        //     $('#myAlert').hide('fade')
+        // })
+    @endif
+    
+</script>
 @endsection

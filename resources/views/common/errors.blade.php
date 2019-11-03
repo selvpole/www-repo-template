@@ -7,11 +7,5 @@
         @elseif ($errors->first('description'))
             <p>The description is required!</p>
         @endif
-        
-        <!--ul>
-            @foreach ($errors->name as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul-->
     </div>
 @endif
